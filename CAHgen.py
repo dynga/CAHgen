@@ -5,12 +5,12 @@ import textwrap
 from progress.bar import Bar
 
 
+
 from PIL import Image, ImageFont, ImageDraw
 from math import floor, ceil
 
 
 def prepare_card(text, card_color, deck_name, deck_logo):
-    background_color, fill_color, outline_color = None, None, None
     if card_color == 'white':
         background_color = '#FFFFFF'
         fill_color = '#000000'
@@ -18,7 +18,7 @@ def prepare_card(text, card_color, deck_name, deck_logo):
     elif card_color == 'black':
         background_color = '#000000'
         fill_color = '#FFFFFF'
-        boder_color = '#000000'
+        outline_color = '#000000'
 
     img = Image.new('RGB', (756, 1051), background_color)
     font_text = ImageFont.truetype(font='Inter-Medium.ttf', size=60)
